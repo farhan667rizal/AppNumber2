@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.StringTokenizer;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -25,9 +27,19 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
+        //StringTokenizer is to add delimiter (blank space)
         TextView txt1 = findViewById(R.id.txt1);
         TextView txt2 = findViewById(R.id.txt2);
+
         txt1.setText("My Own text");
+
+        String str1 = "Some Value";
+
+        StringTokenizer strObject1 = new StringTokenizer(str1);
+
+        txt2.setText(strObject1.nextToken());//this first text
+        txt1.setText(strObject1.nextToken());//this second text
+
 
     }
 
