@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         //StringTokenizer is to add delimiter (blank space)
         TextView txt1 = findViewById(R.id.txt1);
         TextView txt2 = findViewById(R.id.txt2);
-
+        TextView txt3 = findViewById(R.id.txt3);
+        /*
         txt1.setText("My Own text");
 
         String str1 = "Some Value";
@@ -39,8 +40,18 @@ public class MainActivity extends AppCompatActivity {
 
         txt2.setText(strObject1.nextToken());//this first text
         txt1.setText(strObject1.nextToken());//this second text
+        */
 
+        String str2 = "This is another text@This is your text @This is my text";
 
+        StringTokenizer strObject2 = new StringTokenizer(str2, "@");//the delimiter should be '@'
+        // when we use the 'new' keyword, several things happen , the new instance of the given class is created
+            // and memory is allocated for it and special method define in given class is called and that special method
+            // is constructor, our constructor is a new way , a constructor initializes a new object and it's variable
+            // a constructor is actually a special method and cannot have a return type but method is must return
+        txt1.setText(strObject2.nextToken());
+        txt2.setText(strObject2.nextToken());
+        txt3.setText(strObject2.nextToken() + " Concatinate text");
     }
 
     @Override
